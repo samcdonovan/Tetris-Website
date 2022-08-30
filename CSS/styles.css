@@ -1,0 +1,1110 @@
+/* Comments in this document will explain styling that I believe to be important, therefore I will
+not explain individual positioning or styling e.t.c and only explain sections that I think need
+explaining or justification */
+
+/* the font I have chosen for my website is Arial due to it being easily recognisable
+    and nice to look at. It is also recommended as a good font to use to help those with dyslexia. */
+
+* {
+    font-family: "Arial";
+    box-sizing: border-box;
+}
+
+html {
+    position: absolute;
+    clear: both;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/* the colour scheme I have chosen for my website is a warm scheme, with the header and footer
+    using a beige colour, and the navigation bar using a muted orange colour.
+    I chose this scheme because I feel that it is welcoming and also stylish. */
+
+body {
+    background-color: #FDFDFC;
+    min-height: 100%;
+    margin: auto;
+}
+
+div h1 {
+    text-align: center;
+}
+
+/* ------------------------------------------------ */
+
+/* PHP FUNCTIONS */
+
+/*HEADER*/
+
+/* colour for the whole header and footer; beige */
+
+header, footer {
+    background-color: #EAE7DC;
+}
+
+/* title styling; sets position to the middle of the header, above the navBar */
+
+.title {
+    position: relative;
+    width: 20%;
+    left: 40%;
+    padding: 10px;
+}
+
+/* logo styling; sets position to the top left of the page and in the header; */
+
+.logo {
+    position: absolute;
+    float: left;
+    width: 100px;
+    height: 84px;
+    top: 20px;
+    left: 20px;
+}
+
+.titleAndLogo {
+    width: 100%;
+}
+
+/* navigation bar styling; position is middle of the header, below the title */
+
+.navBar {
+    margin-top: 20px;
+    padding: 13px;
+    text-align: center;
+}
+
+.navBar .home {
+    border-style: none;
+}
+
+.navBar a {
+    color: #E98074;
+    margin-left: -2px;
+    padding: 10px;
+    border-left-style: solid;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* navigation bar icons styling; positioned to the right of their respective links */
+
+.navBar img {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+    margin-top: 4px;
+    top: 5px;
+    text-align: center;
+}
+
+.navBar a:visited {
+    color: lightcoral;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    color: blue;
+    text-decoration: none;
+}
+
+/* .current changes the colour of the background on the navigation bar for the page that the user is currently on; 
+this colour is a slighlty darker shade than the header colour */
+
+.current {
+    background-color: #CDC6AC;
+    border-style: solid;
+}
+
+/* popup login box styling;
+positioned in the top right of the page, in the right side of the header */
+
+.login {
+    position: absolute;
+    visibility: visible;
+    float: right;
+    width: 218px;
+    height: 158px;
+    top: 5px;
+    right: 20px;
+    padding: 10px;
+    padding-bottom: 30px;
+    border-style: solid;
+    z-index: 2;
+    text-align: center;
+}
+
+.login label {
+    display: inline-block;
+    margin-top: 7px;
+}
+
+.login button {
+    position: relative;
+    box-sizing: border-box;
+    top: 15px;
+    text-decoration: none;
+}
+
+.loggedInWrap {
+    position: absolute;
+    float: right;
+    width: 238px;
+    height: 140px;
+    top: -5px;
+    right: 10px;
+    padding: 10px;
+    padding-bottom: 30px;
+    z-index: 1;
+}
+
+.loggedInWrap .loggedIn {
+    visibility: hidden;
+    border-style: solid;
+}
+
+.loggedIn img {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    left: 65px;
+}
+
+.loggedIn p {
+    text-align: center;
+}
+
+.loggedIn button {
+    position: relative;
+    box-sizing: border-box;
+    top: -10px;
+    right: -70px;
+    text-decoration: none;
+}
+
+.loggedInWrap .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+#loginError .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* FOOTER */
+
+/* footer styling; footer stays at the bottom of the screen at all times,
+regardless of how much content there is on the page */
+
+footer {
+    position: relative;
+    clear: both;
+    width: 100%;
+    height: 20%;
+    margin-bottom: -50px;
+    line-height: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+/* universal font-size for the footer */
+
+footer p, a {
+    font-size: 14px;
+}
+
+footer h {
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+/* subscribe section; input box with a "SUBSCRIBE" button next to it;
+    positioned in the bottom left of the footer */
+
+.signUp {
+    position: relative;
+    width: 370px;
+    margin-left: 40px;
+}
+
+.signUp p {
+    padding: 0px;
+    margin: 0px;
+}
+
+.signUp input[type=text] {
+    width: 240px;
+    height: 35px;
+    margin-top: 10px;
+}
+
+/* button is rounded and a similar colour to the navBar for consistency */
+
+.signUp button {
+    background-color: lightcoral;
+    width: 120px;
+    height: 35px;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* about us section in footer; positioned to the right of the footer */
+
+.footerAbout {
+    position: absolute;
+    bottom: 18px;
+    right: 180px;
+    text-align: left;
+}
+
+.footerAbout p {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* navigation list/quicklinks in footer; positioned in the far right of the footer */
+
+.quickLinks {
+    float: right;
+    padding: 0px;
+}
+
+.quickLinks ul {
+    margin: auto;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.quickLinks li {
+    height: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+/* font stays the same colour if link has been visited */
+
+.gameInfo, li, #successMessage a:visited {
+    text-decoration: none;
+    color: #0000EE;
+}
+
+/* social media section in footer;
+contains relevant social media icons that are links to their respective websites */
+
+.socials {
+    position: absolute;
+    width: 16%;
+    left: 42%;
+    bottom: 60px;
+    padding: 0px;
+    border-style: none;
+}
+
+.socials h {
+    float: left;
+    width: 100%;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.socials img {
+    float: left;
+    padding-right: 10px;
+    width: 60px;
+    height: 50px;
+}
+
+/* policies section in the footer; contains privacy policy, sitemap and copyright info */
+
+.policies {
+    position: absolute;
+    width: 25%;
+    left: 37.5%;
+    bottom: 10px;
+    padding: 0px;
+    border-style: solid;
+    text-align: center;
+}
+
+.policies p {
+    margin: auto;
+    display: inline-block;
+    padding-right: 20px;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* ------------------------------------------------ */
+
+/* INDEX PAGE */
+
+/* gameInfo styling; this is a paragraph giving a brief history on Tetris 
+   and encouraging the user to play the game */
+
+.gameInfo {
+    position: relative;
+    float: right;
+    width: 600px;
+    height: 350px;
+    top: 18px;
+    right: 50px;
+    margin: 10px;
+    margin-top: 35px;
+    margin-bottom: 100px;
+    border-style: solid;
+    border-color: black;
+    font-size: 20px;
+    text-align: left;
+}
+
+.gameInfo p {
+    margin: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: black;
+}
+
+/* this paragraphs contains links to the game page and register page as part of the paragraph */
+
+.gameInfo a {
+    font-size: 20px;
+}
+
+/* video from youtube using their own embed feature */
+
+iframe {
+    position: relative;
+    float: left;
+    width: 640px;
+    height: 340px;
+    top: 20px;
+    left: 35px;
+    margin-top: 35px;
+    margin-bottom: 100px;
+}
+
+/* ------------------------------------------------ */
+
+/* GAME PAGE */
+
+.game {
+    width: 100%;
+}
+
+.gameboard {
+    border-style: solid;
+    border-width: 10px;
+    border-color: grey;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    left: 190px;
+    top: 35px;
+}
+
+.tetris {
+    display: grid;
+    grid-template-columns: 320px 200px;
+    background-image: url("../images/gameBackground.png");
+    position: relative;
+    width: 700px;
+    height: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 55px;
+    margin-bottom: 100px;
+}
+
+/* paragraphs that represent the time left and score */
+
+.game p {
+    position: absolute;
+    top: 70px;
+    font-size: 34px;
+}
+
+.timer {
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    left: 40px;
+    top: 150px;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    text-align: center;
+}
+
+.timer p {
+    top: -20px;
+    margin-bottom: -30px;
+    position: relative;
+}
+
+.score {
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    right: 25px;
+    top: 150px;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    text-align: center;
+}
+
+.score p {
+    top: -20px;
+    margin-bottom: -30px;
+    position: relative;
+}
+
+.play {
+    position: absolute;
+    text-align: center;
+    width: 600px;
+    height: 120px;
+    top: 350px;
+    left: 500px;
+}
+
+.playButton {
+    width: 150px;
+    height: 60px;
+    background-color: lightcoral;
+    font-size: 40px;
+    position: relative;
+}
+
+#playLogin {
+    font-size: 30px;
+}
+
+#playMessage {
+    font-size: 20px;
+}
+
+#playMessage a {
+    font-size: 20px;
+}
+
+/* arrows that represent the controls for the game;
+    they are large to make it clear to the user how to play */
+
+.upDownArrows {
+    position: absolute;
+    float: right;
+    width: 350px;
+    height: 230px;
+    top: 300px;
+    right: 0px;
+}
+
+.upDownArrows img {
+    float: left;
+    width: 103px;
+    height: 103px;
+}
+
+.upDownArrows p {
+    float: inline-start;
+    width: 240px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.leftRightArrows, .upDownArrows, .esc p {
+    font-size: 25px;
+}
+
+.up {
+    height: 110px;
+    width: 350px;
+    margin-bottom: 20px;
+    border-style: solid;
+}
+
+.down {
+    height: 110px;
+    width: 350px;
+    border-style: solid;
+}
+
+.leftRightArrows {
+    position: absolute;
+    float: right;
+    width: 350px;
+    height: 230px;
+    left: 10px;
+    top: 300px;
+}
+
+.leftRightArrows img {
+    float: right;
+    width: 103px;
+    height: 103px;
+}
+
+.leftRightArrows p {
+    float: inline-start;
+    width: 240px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.left, .right {
+    width: 350px;
+    height: 110px;
+    margin-bottom: 20px;
+    border-style: solid;
+}
+
+.esc {
+    position: absolute;
+    width: 350px;
+    height: 110px;
+    margin-bottom: 20px;
+    border-style: solid;
+    top: 560px;
+    left: 10px;
+}
+
+.esc img {
+    width: 103px;
+    height: 103px;
+}
+
+.esc p {
+    display: inline-block;
+    top: 5px;
+}
+
+.up p {
+    top: 14px;
+    right: 10px;
+}
+
+.down p {
+    top: 120px;
+    right: 30px;
+}
+
+.left p {
+    top: 14px;
+}
+
+.right p {
+    top: 140px;
+}
+
+.gameOver {
+    display: grid;
+    grid-template-columns: 320px 200px;
+    background-image: url("../images/gameBackground.png");
+    position: absolute;
+    width: 700px;
+    height: 540px;
+    top: 168px;
+    left: 408px;
+    margin-top: 55px;
+    margin-bottom: 100px;
+}
+
+#gameOverMessage {
+    font-size: 60px;
+    height: 80px;
+    width: 400px;
+    position: absolute;
+    left: 150px;
+    top: 85px;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    color: transparent;
+    border-style: solid;
+    border-color: white;
+}
+
+#highscore {
+    text-align: center;
+    width: 400px;
+    height: 240px;
+    position: absolute;
+    left: 150;
+    top: 260px;
+    color: white;
+    font-size: 30px;
+}
+
+.difficulty {
+    background-image: url("../images/gameBackground.png");
+    position: absolute;
+    width: 700px;
+    height: 540px;
+    top: 168px;
+    left: 408px;
+    margin-top: 55px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.difficultyButtons {
+    width: 150px;
+    height: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.difficulty button {
+    margin-top: 50px;
+    width: 150px;
+    height: 60px;
+    background-color: lightcoral;
+    font-size: 30px;
+    position: relative;
+    text-align: center;
+}
+
+.scoreExplanation {
+    position: absolute;
+    width: 99%;
+    height: 540px;
+    left: 10px;
+    top: 220px;
+    margin-bottom: 200px;
+    z-index: -1;
+}
+
+#points {
+    position: absolute;
+    font-size: 27px;
+    text-align: center;
+    width: 350px;
+    top: 20px;
+    border-style: solid;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+#difficultyMultiplier {
+    position: absolute;
+    font-size: 27px;
+    text-align: center;
+    top: 80px;
+    right: 23px;
+    width: 350px;
+    height: 350px;
+    margin-right: 10px;
+    padding: 10px;
+    border-style: solid;
+}
+
+/* ------------------------------------------------ */
+
+/* LEADERBOARD PAGE */
+
+/* basic table that shows the users and the score they achieved */
+
+table {
+    display: block;
+    position: relative;
+    width: 500px;
+    height: 420px;
+    top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 100px;
+    margin-top: 35px;
+    overflow: hidden;
+}
+
+caption {
+    width: inherit;
+    border-style: solid;
+    font-size: 50px;
+}
+
+table, th, td, tr {
+    border: 2px solid #575858;
+    border-style: solid;
+}
+
+th {
+    background: white;
+    padding: 15px;
+    padding-left: 5px;
+    font-size: 30px;
+}
+
+tbody {
+    width: 500px;
+    height: 300px;
+    top: 150px;
+    display: block;
+    overflow-x: scroll;
+    background-image: url("../images/gameBackground.png");
+}
+
+th, td {
+    width: auto;
+}
+
+tbody tr {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+td {
+    color: white;
+    text-align: center;
+}
+
+.highlighted td {
+    color: lightcoral;
+}
+
+/* ------------------------------------------------ */
+
+/* ABOUT US PAGE */
+
+/* short paragraph explaining my aims for the project and why I decided to make Tetris */
+
+.projectAims {
+    position: relative;
+    float: left;
+    width: 600px;
+    height: 400px;
+    left: 50px;
+    top: 0px;
+    margin: 10px;
+    margin-top: 35px;
+    margin-bottom: 100px;
+    padding: 10px;
+    border-style: solid;
+    font-size: 20px;
+    text-align: left;
+}
+
+.projectAims p {
+    padding: 10px;
+}
+
+/* contact box that contains relevant contact information and a map showing the address of
+    Middlesex University */
+
+.contact {
+    position: relative;
+    float: right;
+    width: 530px;
+    top: 0px;
+    margin-right: 150px;
+    margin-top: 35px;
+    margin-bottom: 100px;
+    padding: 15px;
+    border-style: solid;
+}
+
+.contact p {
+    float: inline-start;
+    width: 220px;
+    font-size: 24px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.email {
+    width: 350px;
+    height: 90px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: dotted;
+}
+
+.email img {
+    float: left;
+    height: 60px;
+    width: 80px;
+}
+
+.phone {
+    width: 350px;
+    height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: dotted;
+}
+
+.phone img {
+    float: left;
+    width: 80px;
+    height: 80px;
+}
+
+.address {
+    margin-top: 25px;
+    width: 380px;
+    height: 150px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.address p {
+    width: inherit;
+    height: inherit;
+}
+
+/* placeholder image for a map that I will create using JavaScript */
+
+.mapPlaceholder {
+    position: relative;
+    float: right;
+    width: 500px;
+    height: 300px;
+}
+
+.mapPlaceholder img {
+    border-style: solid;
+    width: 500px;
+    height: 300px;
+}
+
+/* basic slideshow that is positioned in the bottom left of the page,
+   below the project aims paragraph */
+
+.slideshow {
+    position: absolute;
+    float: left;
+    width: 600px;
+    height: 400px;
+    top: 650px;
+    left: 50px;
+}
+
+.slideshow a {
+    background-color: #ececec;
+    font-size: 20px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 25%;
+    padding: 8px;
+    margin: 4px;
+}
+
+.slideLinks {
+    position: absolute;
+    bottom: 40px;
+    left: 210px;
+}
+
+.slides {
+    border-style: solid;
+    width: 600px;
+    height: 400px;
+    display: flex;
+    overflow-x: hidden;
+}
+
+.slide {
+    width: 600px;
+    flex-shrink: 0;
+    height: 100%;
+}
+
+.slideshow img {
+    width: inherit;
+    height: inherit;
+}
+
+/* ------------------------------------------------ */
+
+/* REGISTER PAGE */
+
+/* register form  */
+
+.register {
+    visibility: visible;
+    position: relative;
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 45px;
+    margin-bottom: 100px;
+    padding-top: 10px;
+    padding: 20px;
+    font-size: 120%;
+    border-style: solid;
+}
+
+#registerHeader {
+    margin-top: 35px;
+}
+
+.register p {
+    font-style: italic;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+/* styling to put a red star next to the fields that are required */
+
+.required {
+    color: red;
+}
+
+.register label {
+    display: inline-block;
+    text-align: left;
+    height: 15px;
+}
+
+.register div {
+    margin-bottom: 30px;
+}
+
+.register input {
+    float: right;
+}
+
+.register button {
+    position: relative;
+    width: 60%;
+    left: 60px;
+    font-size: 20px;
+    bottom: -15px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.popup {
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+
+.popup .feedback {
+    visibility: hidden;
+    width: 143px;
+    background-color: rgb(235, 63, 63);
+    font-size: 10px;
+    border-color: red;
+    text-align: center;
+    border-radius: 3px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    left: 230px;
+    margin-left: -80px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* Popup arrow */
+
+.popup .feedback::after {
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: red transparent transparent transparent;
+    transform: rotate(-180deg);
+}
+
+.popup #passwordError {
+    left: 100px;
+    top: 20px;
+    width: 190px;
+}
+
+.popup #loginError {
+    position: absolute;
+    left: -10px;
+    top: 53px;
+}
+
+.popup p {
+    position: relative;
+    height: inherit;
+    margin-top: -3px;
+    margin: 4px;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+
+.popup .show {
+    visibility: visible;
+    margin-bottom: 10px;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.success {
+    width: 600px;
+    visibility: hidden;
+    position: absolute;
+    font-size: 32px;
+    text-align: center;
+    top: 250px;
+    left: 452px
+}
+
+#successMessage a {
+    font-size: 32px;
+}
+
+.success .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.hide {
+    visibility: hidden;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
