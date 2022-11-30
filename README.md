@@ -1,4 +1,13 @@
-# Tetris-Website
+<h1 align="center">Tetris Website</h1>
+
+---
+
+## 📝 Table of Contents
+- [About](#about)
+- [Authors](#authors)
+
+## ℹ️ About <a name = "about"></a>
+
 For this project, I made a website based around Tetris. The website has user functionality (register, 
 login, sign out), a working leaderboard, and a working version of Tetirs. The gameboard and 
 Tetrominos (Tetris pieces) are drawn onto a canvas, with each square in the board represented in a 
@@ -12,3 +21,7 @@ with the arrow keys. If the user presses down (making the piece move down faster
 for every press of the key. If they fill a line on the board, they gain an amount of points that 
 corresponds to how many lines were cleared. If they press escape, their score is saved and the game 
 finishes. 
+
+## ✍️ Authors <a name = "authors"></a>
+- [@samcdonovan](https://github.com/samcdonovan)
+
